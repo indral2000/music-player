@@ -101,3 +101,85 @@ audio {
     background: #333;
     color: #fff;
 }
+
+
+/* Theme Colors */
+:root {
+    --bg-color: #ffffff;
+    --text-color: #333333;
+    --player-bg: #f5f5f5;
+    --input-bg: #ffffff;
+    --button-bg: #4CAF50;
+    --button-text: #ffffff;
+}
+
+/* Dark Theme Colors */
+[data-theme="dark"] {
+    --bg-color: #333333;
+    --text-color: #ffffff;
+    --player-bg: #222222;
+    --input-bg: #444444;
+    --button-bg: #1a752e;
+    --button-text: #ffffff;
+}
+
+/* Base Styles */
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    transition: all 0.3s ease;
+}
+
+.theme-toggle-container {
+    position: fixed;
+    top: 20px;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    z-index: 1000;
+}
+
+#theme-toggle {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    background-color: var(--player-bg);
+    color: var(--text-color);
+    transition: all 0.3s ease;
+    font-size: 16px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+#theme-toggle:hover {
+    opacity: 0.8;
+}
+
+.player {
+    margin-top: 70px;
+    background-color: var(--player-bg);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+/* Style untuk elemen-elemen lain */
+input {
+    background-color: var(--input-bg);
+    color: var(--text-color);
+    border: 1px solid var(--text-color);
+}
+
+button {
+    background-color: var(--button-bg);
+    color: var(--button-text);
+}
+
+.playlist {
+    background-color: var(--player-bg);
+}
+
+#song-list li {
+    color: var(--text-color);
+}

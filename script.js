@@ -62,3 +62,31 @@ function filterSongs() {
         item.style.display = songTitle.includes(searchInput) ? 'block' : 'none';
     });
 }
+
+// Theme Toggle Function
+function toggleTheme() {
+    const body = document.body;
+    const button = document.getElementById('theme-toggle');
+    
+    if (body.getAttribute('data-theme') === 'dark') {
+        body.removeAttribute('data-theme');
+        button.innerHTML = '🌙 Dark Mode';
+        localStorage.setItem('theme', 'light');
+    } else {
+        body.setAttribute('data-theme', 'dark');
+        button.innerHTML = '☀️ Light Mode';
+        localStorage.setItem('theme', 'dark');
+    }
+}
+
+// Check saved theme preference when page loads
+document.addEventListener('DOMContentLoaded', () => {
+    const savedTheme = localStorage.getItem('theme');
+    const body = document.body;
+    const button = document.getElementById('theme-toggle');
+    
+    if (savedTheme === 'dark') {
+        body.setAttribute('data-theme', 'dark');
+        button.innerHTML = '☀️ Light Mode';
+    }
+});
