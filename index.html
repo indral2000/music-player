@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Player</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Music Player Container -->
+    <div class="player">
+        <h1>Music Player</h1>
+        <div id="song-title">Select a Song</div>
+        
+        <!-- Audio Element -->
+        <audio id="audio" controls></audio>
+
+        <!-- Controls -->
+        <div class="controls">
+            <button onclick="prevSong()">⏮ Prev</button>
+            <button onclick="playPause()">▶️ Play/Pause</button>
+            <button onclick="nextSong()">⏭ Next</button>
+        </div>
+
+        <!-- Search Bar -->
+        <div class="search-bar">
+            <input type="text" id="search-bar" placeholder="Search song..." oninput="filterSongs()">
+        </div>
+
+        <!-- Playlist -->
+        <div class="playlist">
+            <h3>Playlist</h3>
+            <ul id="song-list">
+                <li onclick="loadSong('music/song1.mp3', 'Foster The People - Pumped Up Kicks')">Foster The People - Pumped Up Kicks</li>
+                <li onclick="loadSong('music/song3.mp3', 'twenty one pilots - Jumpsuit')">twenty one pilots - Jumpsuit</li>
+                <li onclick="loadSong('music/song4.mp3', 'Dr. Dre - I Need A Doctor ft. Eminem, Skylar Grey')">Dr. Dre - I Need A Doctor ft. Eminem, Skylar Grey</li>
+                <li onclick="loadSong('music/song2.mp3', 'Eminem - Mockingbird')">Eminem - Mockingbird</li>
+                <li onclick="loadSong('music/song5.mp3', 'Eminem - Lose Yourself')">Eminem - Lose Yourself</li>
+                <li onclick="loadSong('music/song6.mp3', 'Eminem - The Real Slim Shady')">Eminem - The Real Slim Shady</li>
+                <li onclick="loadSong('music/song7.mp3', 'Eminem - Godzilla ft. Juice WRLD')">Eminem - Godzilla ft. Juice WRLD</li>
+                <li onclick="loadSong('music/song8.mp3', 'Eminem - Without Me')">Eminem - Without Me</li>
+                <li onclick="loadSong('music/song9.mp3', 'Eminem - Rap God ')">Eminem - Rap God </li>
+                <li onclick="loadSong('music/song10.mp3', 'Eminem - Venom')">Eminem - Venom</li>
+                <li onclick="loadSong('music/song11.mp3', 'Eminem - Temporary feat. Skylar Grey')">Eminem - Temporary feat. Skylar Grey</li>
+                <li onclick="loadSong('music/song12.mp3', 'Eminem ft. Rihanna - The Monster')">Eminem ft. Rihanna - The Monster</li>
+            </ul>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
